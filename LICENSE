@@ -1,0 +1,11 @@
+
+---
+
+## STEP 12 — Initialize Git (Inside VS Code)
+
+In VS Code terminal:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit: Iris decision tree project"
