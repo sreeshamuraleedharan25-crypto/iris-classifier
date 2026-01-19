@@ -1,3 +1,5 @@
+import joblib
+import os
 import argparse
 import os
 from sklearn.datasets import load_iris
@@ -17,6 +19,8 @@ def main(test_size, random_state):
 
     model = DecisionTreeClassifier(random_state=random_state)
     model.fit(X_train, y_train)
+    os.makedirs("outputs", exist_ok=True)
+    joblib.dump(model, "outputs/model.joblib")
 
     y_pred = model.predict(X_test)
 
